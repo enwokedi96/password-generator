@@ -221,6 +221,17 @@ function validateAndGeneratePassword() {
   checkcharIndices = allThingsChar.indicesOfTruth
   //console.log(checkcharChoices, checkcharIndices)
 
+  if (checklengthChoices===false && checkcharChoices===false){
+    alert('Please select from options below.');
+  }
+  else if (checklengthChoices===false){
+    alert('No viable password length selected! Please tick an option.');
+  }
+  else if (checkcharChoices===false){
+    alert('No viable character option selected! Please tick an option.');
+  }
+  else{
+  }
 }
 
 // Add event listener to generate button
