@@ -11,11 +11,15 @@ choice character inputs. The allowed inputs include:
 But not to worry, users will be guided by alerts and prompts to ensure your password specifications are correctly
 intrepreted and your needs met.
 
+## Installation
+
+Visit the live website [here](https://enwokedi96.github.io/password-generator/).
+
 ## Usage
 
 The screenshot of the webpage can be visualised below: 
 
-<img alt="screenshot" src="images/screenshot.png" width=400/>
+<img alt="screenshot" src="image/screenshot.png" width=400/>
 
 The layout is quite simple. Before generating a password, users are required to pick one of the option under the password lengths and at least one 
 for the character options. Once due procedures are followed, a unique password is generated and displayed on the screen.
