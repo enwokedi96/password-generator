@@ -116,5 +116,14 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// define check boxes mutuality for password lengths
+function onlyOne (checkbox,name_='radio-1') {
+  var lengthboxes = document.getElementsByName(name_)
+  lengthboxes.forEach((item) => {
+      if (item !== checkbox) item.checked = false; 
+  })
+}
+
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
