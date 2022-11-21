@@ -106,6 +106,17 @@ function generateRandomNumFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// Function for getting a random element from an array
+function getRandom(arr, num) {
+  randString = '';
+  for (let i=0; i<num; i++){
+    var currentChoice = generateRandomNumFromRange(0,arr.length-1);
+    randString+=arr[currentChoice];
+  }
+  //const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return randString; //shuffled.slice(0, num);
+}
+
 // define check boxes mutuality for password lengths
 function onlyOne (checkbox,name_='radio-1') {
   var lengthboxes = document.getElementsByName(name_)
