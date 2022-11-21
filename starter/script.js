@@ -158,5 +158,28 @@ function checkTrueInArray(array){
 //var choices = getArrayValues();
 //console.log('init choices are: ',choices);
 
+// function to generate password length based on user opt
+function returnPasswordLength(indices){
+  var len; 
+  console.log(`chosen indices: ${indices} `)
+  // automated random password length generators
+  if (indices[0]==0){len = generateRandomNumFromRange(min=10,max=32);}
+  else if (indices[0]==1){len = generateRandomNumFromRange(min=33,max=64);}
+  else if (indices[0]==2){len = generateRandomNumFromRange(min=10,max=64);}
+  // manually enter the password length
+  else if (indices[0]==3){
+    len = parseInt(prompt('Please enter the desired password length...'))
+    while (true){
+      if (len<10 || len>64 || isNaN(len)){
+        len = parseInt(prompt('Incorrect value given! Please enter value between 10 - 64...'));
+      }
+      else{break;}
+    }
+  }
+  else{console.log('Error!! Most likely no viable password length picked!');}
+  console.log(`chosen length: ${len} `)
+  return len;
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
