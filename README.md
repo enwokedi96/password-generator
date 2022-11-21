@@ -24,7 +24,7 @@ The screenshot of the webpage can be visualised below:
 The layout is quite simple. Before generating a password, users are required to pick one of the option under the password lengths and at least one 
 for the character options. Once due procedures are followed, a unique password is generated and displayed on the screen.
 
-Te website can also be reloaded to visualised many other colors. The page is reset once reloaded and all prior options cleared.
+The website can also be reloaded to visualised many other colors. The page is reset once reloaded and all prior options cleared.
     
 ## License
 
