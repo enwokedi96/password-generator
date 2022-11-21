@@ -90,21 +90,6 @@ var upperCasedCharacters = [
 
 //------------------------------------------------------------------------------
 
-// Function to prompt user for password options
-function getPasswordOptions() {
-
-}
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
@@ -114,6 +99,11 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
+}
+
+// Function to generate random number from range
+function generateRandomNumFromRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 // define check boxes mutuality for password lengths
@@ -163,6 +153,10 @@ function checkTrueInArray(array){
   return {'isTruthWithin': bool, 
           'indicesOfTruth': trueIndices};
   }
+
+// display init
+//var choices = getArrayValues();
+//console.log('init choices are: ',choices);
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
