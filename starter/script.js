@@ -203,5 +203,25 @@ function returnRandomCharacters(indices,len){
   return char;
 }
 
+// Add validation and generation function
+function validateAndGeneratePassword() {
+
+  var checkcharChoices;
+  var checkcharIndices;
+  var checklengthChoices;
+  var checklengthIndices;
+  var values = getArrayValues();
+
+  allThingsLength = checkTrueInArray(values.lengthChoice);
+  allThingsChar = checkTrueInArray(values.charChoice);
+
+  checklengthChoices = allThingsLength.isTruthWithin;
+  checklengthIndices = allThingsLength.indicesOfTruth;
+  checkcharChoices = allThingsChar.isTruthWithin
+  checkcharIndices = allThingsChar.indicesOfTruth
+  //console.log(checkcharChoices, checkcharIndices)
+
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
