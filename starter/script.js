@@ -219,7 +219,7 @@ function validateAndGeneratePassword() {
   checklengthIndices = allThingsLength.indicesOfTruth;
   checkcharChoices = allThingsChar.isTruthWithin
   checkcharIndices = allThingsChar.indicesOfTruth
-  //console.log(checkcharChoices, checkcharIndices)
+  console.log(checkcharChoices, checkcharIndices)
 
   if (checklengthChoices===false && checkcharChoices===false){
     alert('Please select from options below.');
@@ -235,4 +235,5 @@ function validateAndGeneratePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+generateBtn.addEventListener('click', validateAndGeneratePassword);
+//generateBtn.addEventListener('click', writePassword);
