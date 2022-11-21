@@ -124,6 +124,15 @@ function onlyOne (checkbox,name_='radio-1') {
   })
 }
 
+// save grouped checkboxes as list of boolean
+function listCheckboxValues(name_) {
+  var charboxes = document.getElementsByName(name_)
+  res = [];
+  charboxes.forEach((item) => {res.push(item.checked);})
+  //console.log(res);
+  return res;
+}
+
 // get values of checkbox(es) using input name
 function getArrayValues() {
   var lengthChoice = listCheckboxValues(name_='radio-1');
