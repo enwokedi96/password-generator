@@ -124,6 +124,15 @@ function onlyOne (checkbox,name_='radio-1') {
   })
 }
 
+// get values of checkbox(es) using input name
+function getArrayValues() {
+  var lengthChoice = listCheckboxValues(name_='radio-1');
+  var charChoice = listCheckboxValues(name_='radio-2');
+  console.log(lengthChoice,charChoice);
+  var choices = {'lengthChoice':lengthChoice,
+          'charChoice':charChoice};
+  return choices;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
