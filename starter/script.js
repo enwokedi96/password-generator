@@ -93,6 +93,11 @@ var upperCasedCharacters = [
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
+// randomized form colors for aesthetic feels
+var random_color = "#"+Math.floor(Math.random() * 0x1000000).toString(16);
+console.log(random_color);
+document.getElementById('random-colors').style.background = random_color;
+
 // Write password to the #password input
 function writePassword() {
   var password = validateAndGeneratePassword();
