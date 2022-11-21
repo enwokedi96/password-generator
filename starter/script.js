@@ -259,6 +259,17 @@ function validateAndGeneratePassword() {
     }
     console.log('raw password elements: ' + generatedPasswordRaw);
 
+    // combine all password requirements into final password
+    var password='';
+    if (generatedPasswordRaw.length>1){
+      for (let i=0; i<generatedPasswordRaw.length; i++){
+        password += generatedPasswordRaw[i]; }
+      password = password.split('').sort(function(){return 0.5-Math.random()}).join('');
+    }
+    else{password = generatedPasswordRaw[0]}
+    
+    console.log('final password: ' + password)
+    return password;
 }
 
 // Add event listener to generate button
