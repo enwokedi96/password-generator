@@ -231,6 +231,22 @@ function validateAndGeneratePassword() {
     alert('No viable character option selected! Please tick an option.');
   }
   else{
+    // when user selects more than one char option
+    var len = returnPasswordLength(checklengthIndices);
+      if (checkcharIndices.length>1){
+        var lenPerCharChoice = [];
+        // distribute lengths to each option from password length allotment
+        for (let j=0; j<checkcharIndices.length; j++){
+          if (j==checkcharIndices.length-1){
+            if ((len%checkcharIndices.length)!=0){
+              lenPerCharChoice.push(Math.floor
+                (len/checkcharIndices.length) + (len%checkcharIndices.length));
+            }
+            else{lenPerCharChoice.push(Math.floor(len/checkcharIndices.length));}
+          }
+          else{lenPerCharChoice.push(Math.floor(len/checkcharIndices.length));}
+        }
+      }
   }
 }
 
