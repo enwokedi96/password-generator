@@ -247,6 +247,9 @@ function validateAndGeneratePassword() {
           else{lenPerCharChoice.push(Math.floor(len/checkcharIndices.length));}
         }
       }
+      else{
+        lenPerCharChoice = [len];
+      }
   }
 }
 
