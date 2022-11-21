@@ -250,7 +250,15 @@ function validateAndGeneratePassword() {
       else{
         lenPerCharChoice = [len];
       }
-  }
+
+      // generate random characters and final password
+      var generatedPasswordRaw = [];
+      for (let i=0; i<lenPerCharChoice.length; i++){
+        generatedPasswordRaw.push(returnRandomCharacters(checkcharIndices[i], lenPerCharChoice[i]))
+      }
+    }
+    console.log('raw password elements: ' + generatedPasswordRaw);
+
 }
 
 // Add event listener to generate button
