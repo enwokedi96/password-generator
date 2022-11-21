@@ -31,13 +31,13 @@
         <!-- Adding checklists to assist user meet password criteria -->
         <form id="inputParams">
         <div><span style="text-align: center ;">Please choose password length options...</span> <br>
-          <input type="checkbox" id="lowerHalfLength" name="radio-1" >
+          <input type="checkbox" id="lowerHalfLength" name="radio-1" onclick="onlyOne(this)">
           <label for="lowerHalfLength"> 10 - 32 char length?</label><br>
-          <input type="checkbox" id="upperHalfLength" name="radio-1" >
+          <input type="checkbox" id="upperHalfLength" name="radio-1" onclick="onlyOne(this)">
           <label for="upperHalfLength"> 33 - 64 char length?</label><br>
-          <input type="checkbox" id="randomLength" name="radio-1" >
+          <input type="checkbox" id="randomLength" name="radio-1" onclick="onlyOne(this)">
           <label for="randomLength"> Random length?</label><br>
-          <input type="checkbox" id="manualLength" name="radio-1" >
+          <input type="checkbox" id="manualLength" name="radio-1" onclick="onlyOne(this)">
           <label for="manualLength"> Or enter the length you desire?</label><br>
         </div>
 
