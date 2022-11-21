@@ -124,7 +124,7 @@ function onlyOne (checkbox,name_='radio-1') {
   })
 }
 
-// save grouped checkboxes as list of boolean
+// save grouped checkboxes as array of boolean
 function listCheckboxValues(name_) {
   var charboxes = document.getElementsByName(name_)
   res = [];
@@ -142,6 +142,27 @@ function getArrayValues() {
           'charChoice':charChoice};
   return choices;
 }
+
+// truth value and truth indices inside boolean array
+function checkTrueInArray(array){
+  var bool = false;
+  for(var k=0; k<array.length; k++){
+      if(array[k]){
+          bool = true;
+          break;
+      }
+  }
+
+  if (bool === true){
+    var trueIndices = [...array.entries()].filter(([, v]) => v).map(([i]) => i);
+  }
+  else{
+    var trueIndices = [];
+  }
+  console.log('checkTrueInArray: ',bool, trueIndices);
+  return {'isTruthWithin': bool, 
+          'indicesOfTruth': trueIndices};
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
