@@ -11,3 +11,18 @@ choice character inputs. The allowed inputs include:
 But not to worry, users will be guided by alerts and prompts to ensure your password specifications are correctly
 intrepreted and your needs met.
 
+## Usage
+
+The screenshot of the webpage can be visualised below: 
+
+<img alt="screenshot" src="images/screenshot.png" width=400/>
+
+The layout is quite simple. Before generating a password, users are required to pick one of the option under the password lengths and at least one 
+for the character options. Once due procedures are followed, a unique password is generated and displayed on the screen.
+
+Te website can also be reloaded to visualised many other colors. The page is reset once reloaded and all prior options cleared.
+    
+## License
+
+Link to license can be found [here](LICENSE.md).
+
