@@ -192,5 +192,16 @@ function returnPasswordLength(indices){
   return len;
 }
 
+// Function returns characters using length
+function returnRandomCharacters(indices,len){
+  var char;
+  if (indices==0){char = getRandom(upperCasedCharacters,len);}
+  else if (indices==1){char = getRandom(lowerCasedCharacters,len);}
+  else if (indices==2){char = getRandom(numericCharacters,len);}
+  else if (indices==3){char = getRandom(specialCharacters,len);}
+  else{console.log('Error!! Most likely no viable character option picked!');}
+  return char;
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
